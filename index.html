@@ -404,6 +404,101 @@ footer{background:#0b1f30;color:#bdc8d1;padding:28px 0 88px;font-size:13px}.mobi
   color:#425564 !important;
   text-shadow:0 1px 8px rgba(255,255,255,.95);
 }
+
+
+/* 2026-10-01：快速詢價表單 */
+#quote{
+  background:linear-gradient(180deg,#ffffff 0%,#f4f8fb 100%);
+  padding:84px 0;
+}
+.quote-shell{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:34px;
+  align-items:start;
+}
+.quote-intro{
+  position:sticky;
+  top:96px;
+  background:linear-gradient(145deg,#10283c 0%,#173b59 100%);
+  color:#fff;
+  border-radius:18px;
+  padding:34px;
+  box-shadow:0 18px 44px rgba(16,40,60,.14);
+}
+.quote-intro .eyebrow{font-size:12px;letter-spacing:.18em;color:#e2c98f;font-weight:800;margin-bottom:8px}
+.quote-intro h2{font-size:32px;line-height:1.25;margin:0 0 14px}
+.quote-intro p{margin:0;color:rgba(255,255,255,.82)}
+.quote-intro ul{margin:24px 0 0;padding-left:20px;color:rgba(255,255,255,.9)}
+.quote-intro li+li{margin-top:7px}
+.quote-card{
+  background:#fff;
+  border:1px solid #dbe5ed;
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 12px 34px rgba(16,40,60,.06);
+}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.quote-field{display:flex;flex-direction:column;gap:7px}
+.quote-field.full{grid-column:1/-1}
+.quote-field label{font-weight:800;color:#173b59;font-size:14px}
+.quote-field label span{font-weight:500;color:#7a8791}
+.quote-field input,.quote-field select,.quote-field textarea{
+  width:100%;
+  border:1px solid #cfdbe4;
+  border-radius:10px;
+  padding:12px 13px;
+  background:#fbfdff;
+  color:#1d2933;
+  font:inherit;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s,background .2s;
+}
+.quote-field input:focus,.quote-field select:focus,.quote-field textarea:focus{
+  border-color:#c9a55f;
+  box-shadow:0 0 0 3px rgba(201,165,95,.14);
+  background:#fff;
+}
+.quote-field textarea{min-height:104px;resize:vertical}
+.quote-hint{font-size:12px;color:#788691;line-height:1.55}
+.quote-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.quote-primary,.quote-secondary{
+  border:0;
+  border-radius:10px;
+  padding:13px 18px;
+  font:inherit;
+  font-weight:800;
+  cursor:pointer;
+}
+.quote-primary{background:#c9a55f;color:#10283c;box-shadow:0 7px 18px rgba(201,165,95,.22)}
+.quote-primary:hover{filter:brightness(.97);transform:translateY(-1px)}
+.quote-secondary{background:#eef4f8;color:#173b59}
+.quote-preview{
+  display:none;
+  margin-top:18px;
+  border:1px solid #dbe5ed;
+  border-radius:12px;
+  background:#f8fbfd;
+  padding:15px;
+}
+.quote-preview.show{display:block}
+.quote-preview strong{display:block;color:#173b59;margin-bottom:8px}
+.quote-preview pre{white-space:pre-wrap;word-break:break-word;margin:0;font:inherit;font-size:13px;color:#425564}
+.quote-status{margin-top:10px;font-size:13px;font-weight:700;color:#2d6a4f;min-height:1.4em}
+.quote-required{color:#b45f4a}
+@media(max-width:900px){
+  .quote-shell{grid-template-columns:1fr}
+  .quote-intro{position:static}
+}
+@media(max-width:640px){
+  #quote{padding:60px 0}
+  .quote-grid{grid-template-columns:1fr}
+  .quote-field.full{grid-column:auto}
+  .quote-intro,.quote-card{padding:22px}
+  .quote-intro h2{font-size:27px}
+  .quote-primary,.quote-secondary{width:100%}
+}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"景研有限公司","alternateName":"KEN YEN CO., LTD","url":"https://www.kenyenbox.com.tw/","telephone":"+886-977-048-029","email":"jming2275@gmail.com","address":{"@type":"PostalAddress","postalCode":"412","addressRegion":"台中市","addressLocality":"大里區","streetAddress":"德芳路一段416號1樓","addressCountry":"TW"}}
@@ -426,7 +521,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImageLightbox()
 </script>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top"><div class="logo">K</div><div>景研有限公司<small>KEN YEN CO., LTD</small></div></a><nav><a href="#services">服務項目</a><a href="#about">關於景研</a><a href="#process">合作流程</a><a href="#contact">聯絡我們</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="#top"><div class="logo">K</div><div>景研有限公司<small>KEN YEN CO., LTD</small></div></a><nav><a href="#services">服務項目</a><a href="#about">關於景研</a><a href="#process">合作流程</a><a href="#quote">快速詢價</a><a href="#contact">聯絡我們</a></nav></div></header>
 <main id="top">
 <section class="hero"><div class="wrap"><div class="eyebrow">CUSTOM PAPER BOX · PACKAGING</div><h1>把紙盒做好，<br/>也把品牌質感做出來。</h1><p>客製紙盒、禮盒、精裝盒、精裝封面與加工代工；配合專業廠商提供印刷、燙金與表面加工。</p><div class="btns"><a class="btn gold" href="https://line.me/R/ti/p/~0977048029" target="_blank">LINE 詢價</a><a class="btn ghost" href="tel:0977048029">立即撥打 0977-048-029</a></div></div></section>
 <section class="services" id="services"><div class="wrap"><div class="title"><span>SERVICES</span><h2>從紙盒製作到後加工，一站協作</h2><p>依產品尺寸、用途與預算討論合適作法。</p></div><div class="cards">
@@ -605,6 +700,82 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImageLightbox()
 </div></section>
 <section id="about"><div class="wrap about"><div class="panel"><h3>景研有限公司</h3><p>KEN YEN CO., LTD</p><div class="fact"><strong>所在地</strong>台中市大里區</div><div class="fact"><strong>服務</strong>客製紙盒・禮盒・精裝盒・加工代工</div><div class="fact"><strong>協作</strong>印刷・燙金由專業配合廠商協作</div></div><div class="title"><span>ABOUT</span><h2>重視尺寸、結構與實際生產細節</h2><p>從需求確認、刀線與打樣，到正式製作與後續加工，以清楚溝通協助客戶把包裝需求落實。</p></div></div></section>
 <section id="process"><div class="wrap"><div class="title"><span>PROCESS</span><h2>合作流程</h2></div><div class="steps"><div class="step"><strong>1. 提供需求</strong><p>尺寸、數量、用途與盒型。</p></div><div class="step"><strong>2. 確認規格</strong><p>材質、結構與加工方式。</p></div><div class="step"><strong>3. 刀線／打樣</strong><p>確認尺寸與實際作法。</p></div><div class="step"><strong>4. 正式製作</strong><p>依確認內容安排生產。</p></div><div class="step"><strong>5. 完成交付</strong><p>完成檢查後交付成品。</p></div></div></div></section>
+
+<section id="quote">
+  <div class="wrap quote-shell">
+    <div class="quote-intro">
+      <div class="eyebrow">QUICK QUOTE</div>
+      <h2>快速詢價</h2>
+      <p>填好盒型、尺寸、數量與印刷需求後，按一下就會整理成 LINE 訊息，省去來回確認基本資料。</p>
+      <ul>
+        <li>盒型不知道名稱也沒關係，可選「其他／不確定」</li>
+        <li>尺寸請盡量填長 × 寬 × 高</li>
+        <li>照片可先選好，開啟 LINE 後再直接附上原圖</li>
+      </ul>
+    </div>
+
+    <form class="quote-card" id="quoteForm" onsubmit="return false;">
+      <div class="quote-grid">
+        <div class="quote-field">
+          <label for="qBox">盒型 <b class="quote-required">*</b></label>
+          <select id="qBox" required>
+            <option value="">請選擇</option>
+            <option>上下蓋盒</option>
+            <option>書型盒</option>
+            <option>抽屜盒</option>
+            <option>特殊盒型</option>
+            <option>其他／不確定</option>
+          </select>
+        </div>
+
+        <div class="quote-field">
+          <label for="qQty">數量 <b class="quote-required">*</b></label>
+          <input id="qQty" inputmode="numeric" placeholder="例如：500 個" required/>
+        </div>
+
+        <div class="quote-field full">
+          <label for="qSize">尺寸 <b class="quote-required">*</b> <span>（長 × 寬 × 高）</span></label>
+          <input id="qSize" placeholder="例如：25 × 18 × 6 cm；若不確定可填產品尺寸" required/>
+        </div>
+
+        <div class="quote-field">
+          <label for="qPrint">需要印刷嗎？ <b class="quote-required">*</b></label>
+          <select id="qPrint" required>
+            <option value="">請選擇</option>
+            <option>需要印刷</option>
+            <option>不需要印刷</option>
+            <option>需要燙金／燙銀</option>
+            <option>還不確定，想先討論</option>
+          </select>
+        </div>
+
+        <div class="quote-field">
+          <label for="qUse">用途 <span>（選填）</span></label>
+          <input id="qUse" placeholder="例如：酒盒、茶葉禮盒、產品包裝"/>
+        </div>
+
+        <div class="quote-field full">
+          <label for="qPhoto">參考照片 <span>（選填，可多張）</span></label>
+          <input id="qPhoto" type="file" accept="image/*" multiple/>
+          <div class="quote-hint" id="qPhotoHint">照片只會在您的裝置上選取，不會上傳到網站。按 LINE 後，請在聊天室直接把照片附上。</div>
+        </div>
+
+        <div class="quote-field full">
+          <label for="qNote">其他需求 <span>（選填）</span></label>
+          <textarea id="qNote" placeholder="例如：材質、內襯、交期、是否需要打樣等"></textarea>
+        </div>
+      </div>
+
+      <div class="quote-actions">
+        <button class="quote-primary" type="button" onclick="prepareLineInquiry()">整理詢價內容＋開啟 LINE</button>
+        <button class="quote-secondary" type="button" onclick="copyInquiryOnly()">只複製詢價內容</button>
+      </div>
+      <div class="quote-status" id="quoteStatus" aria-live="polite"></div>
+      <div class="quote-preview" id="quotePreview"><strong>詢價內容預覽</strong><pre id="quotePreviewText"></pre></div>
+    </form>
+  </div>
+</section>
+
 <section class="cta"><div class="wrap"><div class="cta-box"><div><h2>有紙盒需求？直接傳尺寸與數量給我們。</h2><p>可先用 LINE 說明需求，方便快速確認。</p></div><div class="btns"><a class="btn gold" href="https://line.me/R/ti/p/~0977048029" target="_blank">LINE：0977-048-029</a></div></div></div></section>
 <section class="contact" id="contact"><div class="wrap contact-grid"><div class="title"><span>CONTACT</span><h2>聯絡景研</h2><p>紙盒、禮盒、精裝盒與加工需求，歡迎直接聯絡。</p></div><div class="contactbox">
 <div class="row"><b>公司</b>景研有限公司｜KEN YEN CO., LTD</div>
@@ -650,6 +821,100 @@ function toggleSpecialBox(force){
   box.setAttribute('aria-hidden', shouldOpen ? 'false' : 'true');
   if(shouldOpen){ setTimeout(() => box.scrollIntoView({behavior:'smooth', block:'center'}), 80); }
 }
+
+
+function buildInquiryMessage(){
+  const box = document.getElementById('qBox')?.value.trim() || '';
+  const qty = document.getElementById('qQty')?.value.trim() || '';
+  const size = document.getElementById('qSize')?.value.trim() || '';
+  const print = document.getElementById('qPrint')?.value.trim() || '';
+  const use = document.getElementById('qUse')?.value.trim() || '';
+  const note = document.getElementById('qNote')?.value.trim() || '';
+  const files = Array.from(document.getElementById('qPhoto')?.files || []);
+
+  if(!box || !qty || !size || !print){
+    const status=document.getElementById('quoteStatus');
+    if(status){ status.textContent='請先填完盒型、尺寸、數量與印刷需求。'; status.style.color='#b45f4a'; }
+    return null;
+  }
+
+  const lines=[
+    '您好，我想詢價：',
+    '盒型：'+box,
+    '尺寸：'+size,
+    '數量：'+qty,
+    '印刷：'+print
+  ];
+  if(use) lines.push('用途：'+use);
+  if(files.length) lines.push('照片：已選擇 '+files.length+' 張（將於 LINE 聊天室附上）');
+  if(note) lines.push('其他需求：'+note);
+  lines.push('麻煩協助評估，謝謝。');
+  return lines.join('\n');
+}
+
+function showInquiryPreview(message){
+  const box=document.getElementById('quotePreview');
+  const text=document.getElementById('quotePreviewText');
+  if(text) text.textContent=message;
+  if(box) box.classList.add('show');
+}
+
+function fallbackCopyText(text){
+  const ta=document.createElement('textarea');
+  ta.value=text;
+  ta.setAttribute('readonly','');
+  ta.style.position='fixed';
+  ta.style.opacity='0';
+  document.body.appendChild(ta);
+  ta.select();
+  try{ document.execCommand('copy'); }catch(e){}
+  document.body.removeChild(ta);
+}
+
+async function copyInquiryText(message){
+  try{
+    if(navigator.clipboard && window.isSecureContext){
+      await navigator.clipboard.writeText(message);
+    }else{
+      fallbackCopyText(message);
+    }
+    return true;
+  }catch(e){
+    fallbackCopyText(message);
+    return false;
+  }
+}
+
+async function copyInquiryOnly(){
+  const message=buildInquiryMessage();
+  if(!message) return;
+  showInquiryPreview(message);
+  await copyInquiryText(message);
+  const status=document.getElementById('quoteStatus');
+  if(status){ status.textContent='詢價內容已整理並複製，可以直接貼到 LINE。'; status.style.color='#2d6a4f'; }
+}
+
+async function prepareLineInquiry(){
+  const message=buildInquiryMessage();
+  if(!message) return;
+  showInquiryPreview(message);
+  await copyInquiryText(message);
+  const status=document.getElementById('quoteStatus');
+  if(status){ status.textContent='已複製詢價內容，正在開啟 LINE；進入聊天室後直接貼上，再附上照片即可。'; status.style.color='#2d6a4f'; }
+  setTimeout(function(){ window.location.href='https://line.me/R/ti/p/~0977048029'; },220);
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  const photo=document.getElementById('qPhoto');
+  const hint=document.getElementById('qPhotoHint');
+  if(photo && hint){
+    photo.addEventListener('change',function(){
+      const n=photo.files ? photo.files.length : 0;
+      hint.textContent = n ? ('已選擇 '+n+' 張照片；開啟 LINE 後請直接在聊天室附上。') : '照片只會在您的裝置上選取，不會上傳到網站。按 LINE 後，請在聊天室直接把照片附上。';
+    });
+  }
+});
+
 </script>
 <div aria-hidden="true" class="image-lightbox" id="imageLightbox" onclick="if(event.target===this)closeImageLightbox()">
 <button aria-label="關閉" class="lb-close" onclick="closeImageLightbox()" type="button">×</button>
